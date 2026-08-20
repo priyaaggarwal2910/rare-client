@@ -41,7 +41,7 @@ export const PostDetail = ({ isAdmin }) => {
       <div className="container">
         <h1 className="title">{post.title}</h1>
         <p className="subtitle">
-          By {post.user.username}
+          By <Link to={`/profiles/${post.user.id}`}>{post.user.username}</Link>
           {post.category && <> &middot; {post.category.label}</>}
           {post.publication_date && (
             <> &middot; {formatPublicationDate(post.publication_date)}</>
